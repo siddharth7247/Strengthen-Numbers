@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Strengthen Numbers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_onbording_1">Join the community that will fuel your passion for health and fitness by supporting each step of your journey.</string>
+    <string name="on_boarding1_header">Experience the Culture</string>
+</resources>
