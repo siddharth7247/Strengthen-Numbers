@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.example.strengthennumbers.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -12,11 +13,9 @@ import com.example.strengthennumbers.R
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [OnBoarding1Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+lateinit var btnSkip : Button
+lateinit var btnNext : Button
+
 class OnBoarding1Fragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -38,15 +37,14 @@ class OnBoarding1Fragment : Fragment() {
         return inflater.inflate(R.layout.fragment_on_boarding1, container, false)
     }
 
-    companion object {
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            OnBoarding1Fragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        btnNext = view.findViewById(R.id.btnNext)
+        btnSkip = view.findViewById(R.id.btnSkip)
+
+        btnNext.setOnClickListener{
+
+        }
     }
+
 }

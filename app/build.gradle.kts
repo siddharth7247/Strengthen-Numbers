@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
 }
 
 android {
@@ -10,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.example.strengthennumbers"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -40,6 +41,7 @@ android {
             }
         }
     }
+
 }
 
 dependencies {
@@ -51,7 +53,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     //Dots Indicators
-    implementation("com.tbuonomo:dotsindicator:5.0")
+    implementation(libs.viewpagerdotsindicator)
+    //Otp View
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
